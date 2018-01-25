@@ -10,6 +10,7 @@ tmp
 Makefile.local
 .tmpatlas/
 iso/
+*.log
 
 .DS_Store
 .bundle/
@@ -17,3 +18,5 @@ iso/
 custom.sh
 script/custom/*
 !script/custom/.gitkeep
+
+.idea
