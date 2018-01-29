@@ -14,6 +14,10 @@ add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(
 apt-get update
 apt-cache policy docker-ce
 apt-get install -y docker-ce
+# Add vagrant user to Docker group
+usermod -aG docker vagrant
+# Start Docker on boot
+systemctl enable docker
 
 # Install docker compose
 curl -L https://github.com/docker/compose/releases/download/1.17.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
